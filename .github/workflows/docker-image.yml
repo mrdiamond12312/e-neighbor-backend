@@ -21,14 +21,12 @@ jobs:
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
-
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
         - uses: actions/setup-node@v3
         with:
           node-version: 18
           cache: 'npm'
-
       - name: Installing dotenv-vault
         run: |
           npm install dotenv@latest --save-dev
