@@ -19,13 +19,16 @@ jobs:
           node-version: 18
           cache: 'npm'
 
-      - name: Installing dependencies
+      - name: Installing dotenv-vault
         run: |
-          npm install
+          npm install dotenv@latest --save-dev
 
-      - name: Building
+      - name: Decrypt and Generate env from key
+        shell: bash
+        env:
+          DOTENV_KEY: ${{ secrets.DOTENV_KEY }}
         run: |
-          npm run build
+          npx dotenv-vault@latest decrypt "$DOTENV_KEY" >> .env
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
