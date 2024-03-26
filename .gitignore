@@ -39,3 +39,10 @@ lerna-debug.log*
 
 # database backup
 /db-data
+
+.env.*
+.flaskenv*
+!.env.project
+!.env.vault
+
+.env*
