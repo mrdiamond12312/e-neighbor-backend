@@ -41,5 +41,3 @@ jobs:
           context: .
           push: true
           tags: minhthuan1708/e-neighbor-backend:latest
-          secrets: |
-            DOTENV_KEY=${{ secrets.DOTENV_KEY_STAGING }}

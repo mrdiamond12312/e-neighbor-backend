@@ -4,12 +4,7 @@ ENV NODE_ENV development
 # Add a work directory
 WORKDIR /app
 # Cache and Install dependencies
-RUN --mount=type=secret,id=DOTENV_KEY\
-  export DOTENV_KEY=$(cat /run/secrets/DOTENV_KEY)
-RUN npm install dotenv-vault@latest
-RUN npx dotenv-vault@latest decrypt "$DOTENV_KEY" >> .env
-RUN cat .env
-
+COPY .env .
 COPY package.json .
 COPY package-lock.json .
 COPY yarn.lock .
