@@ -22,6 +22,9 @@ bootstrap:
 up:
 	docker-compose up -d --remove-orphans --build
 
+up-staging:
+	docker-compose -f docker-compose.staging.yml -d --remove-orphans --build
+	
 up-watch:
 	docker-compose up --build --remove-orphans
 
