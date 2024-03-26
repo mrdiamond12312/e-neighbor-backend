@@ -51,4 +51,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: minhthuan1708/e-neighbor-backend:latest
+          tags: mrdiamond12312/e-neighbor-render-api:latest
