@@ -32,6 +32,8 @@ jobs:
 
       - name: list files
         run: ls -la
+      - name: print
+        run: cat .env
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
