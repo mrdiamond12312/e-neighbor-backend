@@ -11,8 +11,6 @@ services:
       - "3000:3000"
     env_file:
       - .env
-    environment:
-      DB_HOST: postgres
     networks:
       - neighbor-net
     depends_on:
