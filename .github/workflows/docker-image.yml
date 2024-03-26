@@ -31,7 +31,7 @@ jobs:
           npx dotenv-vault@latest decrypt "$DOTENV_KEY" >> .env
 
       - name: list files
-        run: ls
+        run: ls -la
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
