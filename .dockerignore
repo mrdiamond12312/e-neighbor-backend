@@ -4,7 +4,6 @@ dist
 .env.archive.*
 .env.example
 
-.env*
 .flaskenv*
 !.env.project
 !.env.vault
